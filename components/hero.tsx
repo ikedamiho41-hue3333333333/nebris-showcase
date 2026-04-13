@@ -55,9 +55,9 @@ export function Hero() {
 
           {/* Description */}
           <p className="mb-8 max-w-2xl text-base text-[#9BA89F] md:text-lg">
-            27个AI模型交叉讨论、投票决策，为你创作最优质的内容。
+            27 个 AI 模型交叉讨论、投票决策，为你创作最优质的内容。
             <br className="hidden md:block" />
-            支持42个平台，三层智能架构，让AI为你全权运营。
+            平台矩阵分阶段开放（图文先行），三层智能架构，让 AI 为你全权运营。
           </p>
 
           {/* CTA Buttons */}

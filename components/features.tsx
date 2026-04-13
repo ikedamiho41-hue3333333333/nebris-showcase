@@ -25,8 +25,8 @@ const features = [
   },
   {
     icon: Network,
-    title: "42平台支持",
-    description: "一键发布到小红书、抖音、微信公众号、微博、B站等42个主流内容平台。",
+    title: "平台矩阵",
+    description: "Phase 1 图文多平台已接入与规划中，视频与电商阶段陆续开放，一键适配分发。",
   },
   {
     icon: Sparkles,

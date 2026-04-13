@@ -20,15 +20,15 @@ const notoSansSC = Noto_Sans_SC({
 });
 
 export const metadata: Metadata = {
-  title: '开翌 NEBRIS - 让全球AI为你全权运营',
-  description: '27个AI模型交叉讨论投票，为你创作内容。支持42个平台，三层智能架构，让AI为你全权运营。',
-  generator: 'v0.app',
-  keywords: ['AI内容运营', 'AI写作', '内容创作', 'NEBRIS', '开翌'],
+  title: "开翌 NEBRIS - 让全球AI为你全权运营",
+  description:
+    "27个AI模型交叉讨论投票，为你创作内容。平台矩阵分阶段开放，三层智能架构，让AI为你全权运营。",
+  generator: "v0.app",
+  keywords: ["AI内容运营", "AI写作", "内容创作", "NEBRIS", "开翌"],
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0A0A0F',
-  colorScheme: 'dark',
+  colorScheme: "dark",
 }
 
 export default function RootLayout({
@@ -38,6 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" className="dark scroll-smooth">
+      <head>
+        <meta name="theme-color" content="#0a0a0f" />
+      </head>
       <body className={`${geist.variable} ${geistMono.variable} ${notoSansSC.variable} font-sans antialiased bg-[#0A0A0F] text-[#EEF2EA]`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
