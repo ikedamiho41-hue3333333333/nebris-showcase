@@ -32,6 +32,7 @@ function isConsensusApiErrorText(text: string): boolean {
   return lower.includes("unavailable") || lower.includes("error") || lower.includes("failed")
 }
 
+/** 仅转义 HTML 特殊字符，不处理 * 等 Markdown 符号（加粗已在相邻步骤中剥离）。 */
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, "&amp;")
@@ -42,20 +43,24 @@ function escapeHtml(s: string): string {
 const STRONG_OPEN = '<strong class="font-bold text-[#e0e0e0]">'
 const STRONG_CLOSE = "</strong>"
 
-/** **…** 支持跨行（dotAll）；先匹配加粗再 escape 片段。正则必须用函数内新建实例，避免带 /g 的 RegExp.lastIndex 在多次调用间污染（会导致后续卡片加粗全部失效）。 */
-function applyBoldMarkdown(s: string): string {
-  const re = new RegExp("\\*\\*(.*?)\\*\\*", "gs")
+/**
+ * 先将 **…** 替换为 <strong>，再对每一段纯文本做 HTML 转义。
+ * 每次新建正则 + matchAll，避免 /g 的 lastIndex 污染；全角 ＊ 归一为 ASCII *。
+ */
+function applyBoldMarkdown(text: string): string {
+  const normalized = text.replace(/\uFF0A/g, "*")
+  const boldRegex = new RegExp("\\*\\*(.*?)\\*\\*", "gs")
   const out: string[] = []
   let last = 0
-  let m: RegExpExecArray | null
-  while ((m = re.exec(s)) !== null) {
-    out.push(escapeHtml(s.slice(last, m.index)))
+  for (const m of normalized.matchAll(boldRegex)) {
+    const idx = m.index ?? 0
+    out.push(escapeHtml(normalized.slice(last, idx)))
     out.push(STRONG_OPEN)
     out.push(escapeHtml(m[1]))
     out.push(STRONG_CLOSE)
-    last = re.lastIndex
+    last = idx + m[0].length
   }
-  out.push(escapeHtml(s.slice(last)))
+  out.push(escapeHtml(normalized.slice(last)))
   return out.join("")
 }
 
@@ -63,7 +68,11 @@ function applyBoldMarkdown(s: string): string {
  * 轻量 Markdown：### 行 → h3，**x** → strong（可跨行），连续含 | 的行 → pre
  */
 function renderConsensusMarkdown(raw: string): string {
-  const lines = raw.split(/\r?\n/)
+  /** 长共识里常见「段落 --- ### 下一段」挤在一行，断开后逐段走标题/段落逻辑，避免加粗落在错误块里 */
+  const preprocessed = raw
+    .replace(/\uFF0A/g, "*")
+    .replace(/\s+---\s+(?=#{1,6}\s)/g, "\n")
+  const lines = preprocessed.split(/\r?\n/)
   const parts: string[] = []
   let i = 0
 
