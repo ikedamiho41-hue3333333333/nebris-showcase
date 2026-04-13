@@ -197,18 +197,50 @@ function inferCaseStatus(item: ShowcaseCase): { status: "ready" | "pending" | "f
   return { status: "ready", reason: "" }
 }
 
-function normalizeCoverImage(coverUrl: string | undefined): string {
+const COVER_SLUG_BY_CATEGORY_EN: Record<string, string> = {
+  Money: "money",
+  Fitness: "fitness",
+  Travel: "travel",
+  Food: "food",
+  Tech: "tech",
+  Fashion: "fashion",
+  Skincare: "skincare",
+}
+
+function showcaseCoverByCategory(categoryEn: string): string {
+  const slug = COVER_SLUG_BY_CATEGORY_EN[categoryEn] || categoryEn.toLowerCase()
+  return `/showcase-covers/${slug}-cover.jpg`
+}
+
+/** 本机绝对路径、引擎 output 路径等无法作为站点 URL，回退到赛道封面 */
+function isBrokenCoverUrl(value: string): boolean {
+  if (value.startsWith("/Users/") || value.startsWith("/home/")) {
+    return true
+  }
+  if (/^[A-Za-z]:\\/.test(value)) {
+    return true
+  }
+  if (value.includes("nebris-engine") || value.includes("/output/covers/")) {
+    return true
+  }
+  return false
+}
+
+function normalizeCoverImage(coverUrl: string | undefined, categoryEn: string): string {
   const value = (coverUrl || "").trim()
   if (!value) {
-    return "/placeholder.jpg"
-  }
-  if (value.startsWith("/")) {
-    return value
+    return showcaseCoverByCategory(categoryEn)
   }
   if (/^https?:\/\//i.test(value)) {
     return value
   }
-  return "/placeholder.jpg"
+  if (value.startsWith("/") && isBrokenCoverUrl(value)) {
+    return showcaseCoverByCategory(categoryEn)
+  }
+  if (value.startsWith("/")) {
+    return value
+  }
+  return showcaseCoverByCategory(categoryEn)
 }
 
 function mapCaseToCard(item: ShowcaseCase): ShowcaseViewModel {
@@ -223,7 +255,7 @@ function mapCaseToCard(item: ShowcaseCase): ShowcaseViewModel {
     userInput: item.user_input,
     title: item.output?.title?.trim() || "生成中...",
     body: item.output?.body?.trim() || "当前 Pipeline 仍在执行中，内容生成完成后会自动展示在这里。",
-    coverImage: normalizeCoverImage(item.output?.cover_url),
+    coverImage: normalizeCoverImage(item.output?.cover_url, item.category_en),
     tags: Array.isArray(item.output?.tags) ? item.output.tags : [],
     voteData: toVoteData(item.discussion_highlights?.vote_distribution),
     consensusSummary:
@@ -253,23 +285,14 @@ function viewModelToCardProps(item: ShowcaseViewModel): ShowcaseCardProps {
   }
 }
 
-function buildStats(dataset: ShowcaseDataset, visibleCards: ShowcaseViewModel[]) {
+function buildStats(_dataset: ShowcaseDataset, visibleCards: ShowcaseViewModel[]) {
   const maxModels = visibleCards.reduce((max, item) => Math.max(max, item.modelsParticipated || 0), 0)
-  const avgCost =
-    visibleCards.length > 0
-      ? (
-          visibleCards.reduce((sum, item) => {
-            const source = dataset.cases.find((entry) => entry.id === item.id)
-            return sum + (source?.cost?.total_usd || 0)
-          }, 0) / visibleCards.length
-        ).toFixed(4)
-      : "0.0000"
 
   return [
     { value: `${maxModels || 0}+`, label: "交叉讨论的 AI 模型" },
     { value: `${dataset.total_pipelines}`, label: "展示赛道 Pipeline 数" },
     { value: `${visibleCards.length}`, label: "可直接展示的真实案例" },
-    { value: `$${avgCost}`, label: "平均单次 Pipeline 成本" },
+    { value: "¥3.2/篇 · 27个AI全流程", label: "平均单篇内容成本" },
   ] as const
 }
 

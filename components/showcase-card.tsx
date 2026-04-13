@@ -42,9 +42,9 @@ function escapeHtml(s: string): string {
 const STRONG_OPEN = '<strong class="font-bold text-[#e0e0e0]">'
 const STRONG_CLOSE = "</strong>"
 
-/** **…** 支持跨行（dotAll）；先切分再对片段 escape，避免 ** 被整段 escape 掉 */
+/** **…** 支持跨行（dotAll）；先匹配加粗再 escape 片段。正则必须用函数内新建实例，避免带 /g 的 RegExp.lastIndex 在多次调用间污染（会导致后续卡片加粗全部失效）。 */
 function applyBoldMarkdown(s: string): string {
-  const re = /\*\*(.*?)\*\*/gs
+  const re = new RegExp("\\*\\*(.*?)\\*\\*", "gs")
   const out: string[] = []
   let last = 0
   let m: RegExpExecArray | null
