@@ -76,7 +76,7 @@ function ScrollCue() {
   return (
     <a
       href="#showcase-tracks"
-      className="mt-14 inline-flex flex-col items-center gap-2 text-sm text-[#9BA89F] transition-colors hover:text-[#d4a853]"
+      className="mt-14 inline-flex flex-col items-center gap-2 text-sm text-[#888888] transition-colors hover:text-[#d4a853]"
     >
       <span>向下探索流程与案例</span>
       <ChevronDown className="h-6 w-6 animate-bounce text-[#d4a853]" aria-hidden />
@@ -285,17 +285,20 @@ const sortedShowcaseCards = [...mappedCards].sort((a, b) => {
 
 export default function ShowcasePage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0f] text-[#EEF2EA]">
+    <main className="min-h-screen bg-[#0a0a0f] text-[#e0e0e0]">
       <ShowcaseScrollProgress />
-      <header className="sticky top-0 z-40 border-b border-[#2A2A36] bg-[#0a0a0f]/90 backdrop-blur-md">
+      <header className="sticky top-0 z-40 border-b border-[#d4a853]/20 bg-[#0a0a0f]/90 backdrop-blur-md">
         <div className="mx-auto grid h-14 max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-2 px-4 md:gap-4 md:px-6">
-          <Link href="/" className="justify-self-start text-sm font-medium text-[#EEF2EA] hover:text-[#d4a853]">
+          <Link
+            href="/"
+            className="justify-self-start text-sm font-medium text-[#e0e0e0] transition-colors hover:bg-[#d4a853]/20 hover:text-[#d4a853]"
+          >
             ← 返回首页
           </Link>
-          <span className="max-w-[11rem] truncate text-center text-[11px] tabular-nums text-[#d4a853] sm:max-w-none sm:text-xs md:text-sm">
+          <span className="max-w-[11rem] truncate text-center text-xs tabular-nums text-[#d4a853] sm:max-w-none md:text-sm">
             {readyCards.length}/{mappedCards.length} 赛道已就绪
           </span>
-          <span className="justify-self-end text-xs text-[#9BA89F]">/showcase</span>
+          <span className="justify-self-end text-xs text-[#888888]">/showcase</span>
         </div>
       </header>
 
@@ -305,21 +308,18 @@ export default function ShowcasePage() {
         </div>
         <div className="relative mx-auto max-w-4xl text-center">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-[#d4a853]">NEBRIS · Showcase</p>
-          <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-6xl">
-            <span className="text-[#EEF2EA]">开翌</span>{" "}
-            <span className="bg-gradient-to-r from-[#d4a853] via-[#e8c97a] to-[#d4a853] bg-clip-text text-transparent">
-              NEBRIS
-            </span>
+          <h1 className="mb-4 text-4xl font-bold tracking-tight text-[#d4a853] md:text-6xl">
+            开翌 NEBRIS
           </h1>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#9BA89F] md:text-lg">
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#888888] md:text-lg">
             你说需求，剩下27个AI搞定
           </p>
           <ScrollCue />
         </div>
       </section>
 
-      <section className="border-y border-[#2A2A36] bg-[#0a0a0f] px-4 py-12 md:px-6">
-        <p className="mx-auto mb-10 max-w-2xl text-center text-sm leading-relaxed text-[#9BA89F] md:text-base">
+      <section className="border-y border-[#d4a853]/20 bg-[#0a0a0f] px-4 py-12 md:px-6">
+        <p className="mx-auto mb-10 max-w-2xl text-center text-sm leading-relaxed text-[#888888] md:text-base">
           好内容不是瞬间生成的。27个AI吵八轮，比单打独斗更可靠。
         </p>
         <ShowcasePipelineTimeline />
@@ -327,8 +327,8 @@ export default function ShowcasePage() {
 
       <section id="showcase-tracks" className="scroll-mt-20 px-4 py-16 md:px-6 md:py-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-2 text-center text-xl font-semibold text-[#EEF2EA] md:text-2xl">真实赛道 · Pipeline 展示</h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-[#9BA89F]">
+          <h2 className="mb-2 text-center text-xl font-semibold text-[#e0e0e0] md:text-2xl">真实赛道 · Pipeline 展示</h2>
+          <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-[#888888]">
             下面的标题和文案，是27个AI刚才真实讨论写出来的。不是人改的，也不是模板套的。
           </p>
 
@@ -343,49 +343,49 @@ export default function ShowcasePage() {
               ))}
             </div>
           ) : (
-            <div className="rounded-xl border border-dashed border-[#4A4A56] bg-[#12121A]/50 p-8 text-center text-sm text-[#9BA89F]">
+            <div className="rounded-xl border border-dashed border-[#d4a853]/30 bg-[#111116] p-8 text-center text-sm text-[#888888]">
               真实案例还在同步中，稍后刷新即可看到最新 Pipeline 产出。
             </div>
           )}
         </div>
       </section>
 
-      <section className="border-t border-[#2A2A36] bg-[#12121A]/40 px-4 py-16 md:px-6 md:py-20">
+      <section className="border-t border-[#d4a853]/20 bg-[#0a0a0f] px-4 py-16 md:px-6 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-3 text-center text-xl font-semibold text-[#EEF2EA] md:text-2xl">透明账本</h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-[#9BA89F] md:text-base">
+          <h2 className="mb-3 text-center text-xl font-semibold text-[#e0e0e0] md:text-2xl">透明账本</h2>
+          <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-[#888888] md:text-base">
             每次产出消耗多少AI、多少钱，全给你算清楚
           </p>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="rounded-xl border border-[#2A2A36] bg-[#0a0a0f] p-5 text-center transition-colors hover:border-[#d4a853]/40"
+                className="rounded-xl border border-[#d4a853]/30 bg-[#111116] p-5 text-center transition-all hover:-translate-y-1 hover:border-[#d4a853]/70 hover:bg-[#d4a853]/20"
               >
-                <p className="text-2xl font-bold text-[#d4a853] md:text-3xl">{s.value}</p>
-                <p className="mt-2 text-xs text-[#9BA89F] md:text-sm">{s.label}</p>
+                <p className="text-3xl font-bold text-[#d4a853]">{s.value}</p>
+                <p className="mt-2 text-xs text-[#888888] md:text-sm">{s.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-16 md:px-6 md:py-24">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-[#2A2A36] bg-[#12121A] p-8 md:p-10">
+      <section className="border-t border-[#d4a853]/20 px-4 py-16 md:px-6 md:py-24">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-[#d4a853]/30 bg-[#111116] p-8 md:p-10">
           <h2 className="mb-4 text-lg font-semibold text-[#d4a853] md:text-xl">关于开翌 NEBRIS</h2>
-          <p className="text-sm leading-relaxed text-[#C8D0C8] md:text-base">
+          <p className="text-sm leading-relaxed text-[#e0e0e0] md:text-base">
             开翌=NEBRIS=27个AI的脑暴会。你提需求，AI们吵架、写作、检查、发布，一条龙搞定。给想省心的内容创作者。
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/"
-              className="rounded-lg border border-[#d4a853]/50 bg-[#d4a853]/10 px-5 py-2.5 text-sm font-medium text-[#d4a853] transition-all hover:bg-[#d4a853]/20"
+              className="rounded-lg border border-[#d4a853]/30 bg-[#d4a853]/20 px-5 py-2.5 text-sm font-medium text-[#d4a853] transition-all hover:border-[#d4a853]/70 hover:bg-[#d4a853]/30"
             >
               返回官网首页
             </Link>
             <Link
               href="/chat"
-              className="rounded-lg border border-[#2A2A36] px-5 py-2.5 text-sm text-[#9BA89F] transition-colors hover:border-[#d4a853]/40 hover:text-[#EEF2EA]"
+              className="rounded-lg border border-[#d4a853]/30 px-5 py-2.5 text-sm text-[#888888] transition-colors hover:border-[#d4a853]/70 hover:bg-[#d4a853]/20 hover:text-[#e0e0e0]"
             >
               开始创作
             </Link>
@@ -393,13 +393,13 @@ export default function ShowcasePage() {
         </div>
       </section>
 
-      <section className="border-t border-[#2A2A36] bg-[#0a0a0f] px-4 py-16 md:px-6 md:py-20">
+      <section className="border-t border-[#d4a853]/20 bg-[#0a0a0f] px-4 py-16 md:px-6 md:py-20">
         <div className="mx-auto max-w-xl text-center">
           <h2 className="mb-2 text-lg font-semibold text-[#d4a853] md:text-xl">联系我们</h2>
-          <p className="mb-8 text-sm text-[#9BA89F] md:text-base">想体验完整版？留下联系方式</p>
-          <div className="space-y-4 rounded-2xl border border-[#2A2A36] bg-[#12121A] p-8 text-left text-sm text-[#C8D0C8]">
+          <p className="mb-8 text-sm text-[#888888] md:text-base">想体验完整版？留下联系方式</p>
+          <div className="space-y-4 rounded-2xl border border-[#d4a853]/30 bg-[#111116] p-8 text-left text-sm text-[#e0e0e0]">
             <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-              <span className="shrink-0 text-[#9BA89F]">商务邮箱</span>
+              <span className="shrink-0 text-[#888888]">商务邮箱</span>
               <a
                 href="mailto:hello@nebris.ai"
                 className="break-all text-[#d4a853] underline-offset-2 transition-colors hover:underline"
@@ -408,17 +408,17 @@ export default function ShowcasePage() {
               </a>
             </div>
             <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-              <span className="shrink-0 text-[#9BA89F]">微信</span>
-              <span className="font-mono text-[#EEF2EA]">NEBRIS_2026</span>
+              <span className="shrink-0 text-[#888888]">微信</span>
+              <span className="font-mono text-[#e0e0e0]">NEBRIS_2026</span>
             </div>
-            <p className="border-t border-[#2A2A36] pt-4 text-xs leading-relaxed text-[#6B756E]">
+            <p className="border-t border-[#d4a853]/20 pt-4 text-xs leading-relaxed text-[#888888]">
               以上为展示用占位信息，正式联络方式以官网与产品内公告为准。
             </p>
           </div>
         </div>
       </section>
 
-      <footer className="border-t border-[#2A2A36] px-4 py-8 text-center text-xs text-[#6B756E]">
+      <footer className="border-t border-[#d4a853]/20 px-4 py-8 text-center text-xs text-[#888888]">
         © 2026 开翌 NEBRIS · Showcase
       </footer>
     </main>

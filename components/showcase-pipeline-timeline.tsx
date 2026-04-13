@@ -37,9 +37,9 @@ export function ShowcasePipelineTimeline() {
 
   return (
     <div ref={rootRef} className="mx-auto max-w-6xl">
-      <h2 className="mb-8 text-center text-xl font-semibold text-[#EEF2EA] md:text-2xl">8 步内容流水线</h2>
+      <h2 className="mb-8 text-center text-xl font-semibold text-[#e0e0e0] md:text-2xl">8 步内容流水线</h2>
       <div className="relative md:static">
-        <p className="mb-2 flex items-center justify-center gap-1 text-[11px] text-[#9BA89F] md:hidden">
+        <p className="mb-2 flex items-center justify-center gap-1 text-[11px] text-[#888888] md:hidden">
           <ChevronRight className="h-3.5 w-3.5 shrink-0 animate-pulse text-[#d4a853]" aria-hidden />
           <span>左右滑动查看全流程</span>
         </p>
@@ -52,9 +52,9 @@ export function ShowcasePipelineTimeline() {
             {PIPELINE_STEPS.map((step, i) => (
               <Fragment key={step.id}>
                 {i > 0 ? (
-                  <div className="relative -mx-px h-0.5 min-w-[12px] flex-1 overflow-hidden rounded-full bg-[#1A1A24]">
+                  <div className="relative -mx-px h-0.5 min-w-[12px] flex-1 overflow-hidden rounded-full bg-[#d4a853]/40">
                     <div
-                      className="absolute inset-y-0 left-0 w-full origin-left rounded-full bg-gradient-to-r from-[#8B7634]/80 via-[#d4a853] to-[#e8c97a]/90 transition-transform duration-700 ease-out"
+                      className="absolute inset-y-0 left-0 w-full origin-left rounded-full bg-[#d4a853] transition-transform duration-700 ease-out"
                       style={{
                         transform: active ? "scaleX(1)" : "scaleX(0)",
                         transitionDelay: `${(i - 1) * STAGGER_MS}ms`,
@@ -62,13 +62,13 @@ export function ShowcasePipelineTimeline() {
                     />
                   </div>
                 ) : null}
-                <div className="flex w-10 shrink-0 flex-col items-center gap-2">
+                <div className="flex w-11 shrink-0 flex-col items-center gap-2">
                   <div
                     className={[
-                      "flex h-10 w-10 items-center justify-center rounded-full border-2 text-sm font-semibold transition-all duration-500 ease-out",
+                      "flex h-11 w-11 items-center justify-center rounded-full text-sm font-bold transition-all duration-500 ease-out",
                       active
-                        ? "scale-100 border-[#d4a853] bg-[#12121A] text-[#d4a853] shadow-[0_0_24px_rgba(212,168,83,0.35)]"
-                        : "scale-90 border-[#2A2A36] bg-[#0a0a0f] text-[#5c5c68]",
+                        ? "scale-100 bg-[#d4a853] text-[#0a0a0f] shadow-[0_0_20px_rgba(212,168,83,0.45)]"
+                        : "scale-90 bg-[#d4a853]/40 text-[#0a0a0f]/70",
                     ].join(" ")}
                     style={{ transitionDelay: `${i * STAGGER_MS}ms` }}
                     aria-hidden
@@ -76,7 +76,7 @@ export function ShowcasePipelineTimeline() {
                     {i + 1}
                   </div>
                   <p
-                    className="max-w-[4.75rem] text-center text-[11px] leading-tight text-[#9BA89F] transition-opacity duration-500 ease-out md:max-w-[5.5rem] md:text-xs"
+                    className="max-w-[4.75rem] text-center text-xs leading-tight text-[#888888] transition-opacity duration-500 ease-out md:max-w-[5.5rem]"
                     style={{
                       opacity: active ? 1 : 0.35,
                       transitionDelay: `${i * STAGGER_MS}ms`,

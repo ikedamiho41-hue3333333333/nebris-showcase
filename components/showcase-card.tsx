@@ -39,7 +39,7 @@ function escapeHtml(s: string): string {
     .replace(/>/g, "&gt;")
 }
 
-const STRONG_OPEN = '<strong class="font-semibold text-[#f1ebdc]">'
+const STRONG_OPEN = '<strong class="font-bold text-[#e0e0e0]">'
 const STRONG_CLOSE = "</strong>"
 
 /** **…** 支持跨行（dotAll）；先切分再对片段 escape，避免 ** 被整段 escape 掉 */
@@ -68,9 +68,9 @@ function renderConsensusMarkdown(raw: string): string {
   let i = 0
 
   const h3Class = "text-base font-semibold text-[#d4a853] mt-3 mb-1.5 first:mt-0"
-  const pClass = "text-sm leading-relaxed text-[#E8EBE4] my-1"
+  const pClass = "text-sm leading-relaxed text-[#e0e0e0] my-1"
   const preClass =
-    "my-2 overflow-x-auto rounded-md border border-[#2A2A36] bg-[#0a0a0f]/85 p-2.5 text-[11px] font-mono leading-snug text-[#C8D0C8]"
+    "my-2 overflow-x-auto rounded-md border border-[#d4a853]/30 bg-[#0a0a0f] p-2.5 text-[11px] font-mono leading-snug text-[#e0e0e0]"
 
   while (i < lines.length) {
     const line = lines[i]
@@ -158,12 +158,12 @@ export function ShowcaseCard({
   return (
     <article
       className={[
-        "group relative overflow-hidden rounded-xl border bg-[#12121A] transition-all duration-300 ease-out",
+        "group relative overflow-hidden rounded-xl border border-[#d4a853]/30 bg-[#111116] transition-all duration-300 ease-out",
         locked
-          ? "border-[#2A2A36]"
+          ? "border-[#d4a853]/30"
           : [
-              "hover:-translate-y-1 hover:border-[#d4a853]/70 hover:shadow-lg hover:shadow-[#d4a853]/10",
-              expanded ? "border-[#d4a853]/60 shadow-md shadow-[#d4a853]/5" : "border-[#2A2A36]",
+              "hover:-translate-y-1 hover:border-[#d4a853]/70 hover:bg-[#d4a853]/20",
+              expanded ? "border-[#d4a853]/70" : "",
             ].join(" "),
       ].join(" ")}
     >
@@ -185,17 +185,17 @@ export function ShowcaseCard({
           <span className="text-3xl leading-none" aria-hidden>
             {icon}
           </span>
-          <span className="text-xs font-medium uppercase tracking-wider text-[#d4a853]">
+          <span className="text-sm font-medium uppercase tracking-wider text-[#d4a853]">
             {category}
           </span>
         </div>
         <div className="min-w-0 flex-1 space-y-2">
-          <p className="line-clamp-2 text-xs text-[#9BA89F]">{userInput}</p>
-          <h3 className="line-clamp-2 text-base font-semibold leading-snug text-[#EEF2EA] md:text-lg">
+          <p className="line-clamp-2 text-sm text-[#888888]">{userInput}</p>
+          <h3 className="line-clamp-2 text-base font-semibold leading-snug text-[#e0e0e0] md:text-lg">
             {title}
           </h3>
         </div>
-        <div className="relative mx-auto h-24 w-full shrink-0 overflow-hidden rounded-lg border border-[#2A2A36] md:mx-0 md:h-20 md:w-28">
+        <div className="relative mx-auto h-20 w-full shrink-0 overflow-hidden rounded-lg border border-[#d4a853]/30 md:mx-0 md:h-20 md:w-28">
           <Image
             src={coverImage}
             alt={title}
@@ -226,14 +226,14 @@ export function ShowcaseCard({
         style={{ gridTemplateRows: expanded ? "1fr" : "0fr" }}
       >
         <div className="min-h-0 overflow-hidden">
-          <div className="space-y-4 border-t border-[#2A2A36] px-4 pb-5 pt-2">
-            <p className="whitespace-pre-wrap text-sm leading-relaxed text-[#C8D0C8]">{body}</p>
+          <div className="space-y-4 border-t border-[#d4a853]/20 px-4 pb-5 pt-2">
+            <p className="whitespace-pre-wrap text-sm leading-relaxed text-[#e0e0e0]">{body}</p>
             {tags.length > 0 && (
               <div className="flex flex-wrap gap-2">
                 {tags.map((t) => (
                   <span
                     key={t}
-                    className="rounded-full border border-[#d4a853]/35 bg-[#d4a853]/10 px-2.5 py-0.5 text-xs text-[#d4a853]"
+                    className="rounded-full bg-[#d4a853] px-2.5 py-0.5 text-xs font-medium text-[#0a0a0f]"
                   >
                     {t}
                   </span>
@@ -242,35 +242,35 @@ export function ShowcaseCard({
             )}
             {voteData.length > 0 && (
               <div>
-                <p className="mb-3 text-xs font-medium text-[#d4a853]">投票结果（按分数段）</p>
+                <p className="mb-3 text-sm font-medium text-[#d4a853]">投票结果（按分数段）</p>
                 <ul className="space-y-3">
                   {voteData.map((v) => {
                     const pct = Math.min(100, Math.max(0, v.percent))
                     return (
-                      <li key={v.score} className="flex items-center gap-3 text-xs">
-                        <span className="w-8 shrink-0 tabular-nums text-[#9BA89F]">{v.score}分</span>
-                        <div className="relative h-2.5 min-w-0 flex-1 overflow-hidden rounded-full bg-[#1A1A24]">
+                      <li key={v.score} className="flex items-center gap-3 text-sm">
+                        <span className="w-8 shrink-0 tabular-nums font-bold text-[#d4a853]">{v.score}分</span>
+                        <div className="relative h-2.5 min-w-0 flex-1 overflow-hidden rounded-full bg-[#d4a853]/20">
                           {/* 宽度用 Tailwind 任意值 + CSS 变量，等价于 w-[XX%] */}
                           <div
                             className={`h-full max-w-full rounded-full transition-[width] duration-500 ease-out w-[length:var(--vote-pct,0%)] ${voteBarColorClass(v.score)}`}
                             style={{ ["--vote-pct" as string]: `${pct}%` }}
                           />
                         </div>
-                        <span className="w-10 shrink-0 text-right tabular-nums text-[#EEF2EA]">{pct}%</span>
+                        <span className="w-10 shrink-0 text-right tabular-nums font-bold text-[#d4a853]">{pct}%</span>
                       </li>
                     )
                   })}
                 </ul>
-                <p className="mt-2 text-[10px] leading-relaxed text-[#6B756E]">
+                <p className="mt-2 text-xs leading-relaxed text-[#888888]">
                   色例：7 分黄 · 8 分绿 · 9 分金
                 </p>
               </div>
             )}
             {consensusSummary.trim() ? (
-              <div className="rounded-r-lg border-l-[4px] border-[#d4a853] bg-[#d4a347]/5 py-3 pl-4 pr-3">
-                <p className="mb-2 text-xs font-semibold tracking-wide text-[#d4a853]">🤝 27个AI的共识</p>
+              <div className="rounded-r-lg border-l-4 border-[#d4a853] bg-[#d4a853]/5 py-3 pl-4 pr-3">
+                <p className="mb-2 text-sm font-semibold tracking-wide text-[#d4a853]">🤝 27个AI的共识</p>
                 {isConsensusApiErrorText(consensusSummary) ? (
-                  <p className="text-sm leading-relaxed text-[#9BA89F]">共识详情暂不可用</p>
+                  <p className="text-sm leading-relaxed text-[#888888]">共识详情暂不可用</p>
                 ) : (
                   <div
                     className="consensus-md max-w-none"
@@ -291,7 +291,7 @@ export function ShowcaseCard({
             aria-hidden
             role="presentation"
           />
-          <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-[#d4a853]/25 bg-[#0a0a0f]/92 py-2.5 text-center text-xs font-medium tracking-wide text-[#d4a853] backdrop-blur-sm">
+          <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-[#d4a853]/30 bg-[#0a0a0f]/95 py-2.5 text-center text-xs font-medium tracking-wide text-[#d4a853] backdrop-blur-sm">
             AI正在优化中...
           </div>
         </>
