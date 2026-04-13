@@ -1,0 +1,725 @@
+{
+  "generated_at": "2026-04-13",
+  "engine_version": "2.0",
+  "total_pipelines": 7,
+  "cases": [
+    {
+      "id": "money-c02bd484",
+      "category": "理财",
+      "category_en": "Money",
+      "icon": "💰",
+      "user_input": "月薪5000怎么攒钱理财，90后打工人存款攻略",
+      "pipeline_level": "standard",
+      "models_participated": 27,
+      "pipeline_duration_seconds": 384.4,
+      "qualityPassed": true,
+      "totalScore": 95,
+      "steps_summary": [
+        {
+          "step": 1,
+          "name": "意图解读",
+          "status": "completed",
+          "duration_ms": 101803,
+          "highlight": ""
+        },
+        {
+          "step": 2,
+          "name": "数据采集",
+          "status": "completed",
+          "duration_ms": 9924,
+          "highlight": "采集到4条热点、0篇爆款"
+        },
+        {
+          "step": 3,
+          "name": "策略制定",
+          "status": "completed",
+          "duration_ms": 89295,
+          "highlight": "27个AI讨论策略"
+        },
+        {
+          "step": 4,
+          "name": "自由组队",
+          "status": "completed",
+          "duration_ms": 166330,
+          "highlight": ""
+        },
+        {
+          "step": 5,
+          "name": "内容生产",
+          "status": "completed",
+          "duration_ms": 17040,
+          "highlight": "三线并行：文案+封面+合规"
+        },
+        {
+          "step": 6,
+          "name": "质检封驳",
+          "status": "completed",
+          "duration_ms": 1,
+          "highlight": "质检95分，quality_v6"
+        },
+        {
+          "step": 7,
+          "name": "用户确认发布",
+          "status": "completed",
+          "duration_ms": 1,
+          "highlight": "用户确认发布"
+        },
+        {
+          "step": 8,
+          "name": "数据复盘",
+          "status": "completed",
+          "duration_ms": 0,
+          "highlight": ""
+        }
+      ],
+      "output": {
+        "title": "月薪5000存2万？亲测3步真能攒！",
+        "body": "谁懂啊！刚毕业那会儿工资卡余额常年不到500块，房租1800+外卖600+通勤200，月底一算：5000块像被风吹走。我踩过坑——记账App装了7个、奶茶戒了又破戒、甚至试过「信封存钱法」结果第三天就偷拿去买耳机…直到第4个月摸清真实现金流，才真正开始攒下第一笔2万元。\n\n✅【第一步：先保底，不是省钱是“冻住”】\n工资到账当天，立刻转走30%（1500元）到独立账户，我用的是支付宝「笔笔攒」，每笔消费自动存1元起，3个月多攒出217元；剩下3500元才是可支配资金。实话说，前两周手抖想转回来，但坚持下来后发现：房租1800、话费30、水电120、交通200、外卖500（限每周4顿）、日用品150——加起来刚好3000，还剩500元弹性空间。\n\n✅【第二步：把“小钱”变“活钱”】\n别急着买基金！我用1500元基础储蓄做两件事：①1000元放余额宝（年化1.8%，比活期高3倍）；②500元定投中证500指数基金（每月10号扣款，手续费0.15%）。坚持11个月后，收益+利息共213.6元，不多，但看到数字涨真的会上头！\n\n✅【第三步：每月复盘，只改1个漏洞】\n我用鲨鱼记账APP导出月报，重",
+        "tags": [
+          "90后存钱",
+          "月薪5000理财",
+          "打工人存款攻略",
+          "低门槛理财",
+          "轻理财入门",
+          "存钱技巧",
+          "小红书理财干货"
+        ],
+        "cover_url": "",
+        "illustrations": []
+      },
+      "discussion_highlights": {
+        "total_rounds": 2,
+        "key_debate": "锚点检查跳过",
+        "vote_distribution": {
+          "8": 10,
+          "9": 2
+        },
+        "consensus_score": 8.2,
+        "consensus_summary": "共识生成失败：Model \"bailian_deepseek\" is currently unavailable until 2026-04-13T06:49:19.561Z."
+      },
+      "cost": {
+        "total_usd": 0.0267,
+        "breakdown": {
+          "intent_interpretation": 0.002,
+          "strategy_formulation": 0.0247
+        }
+      }
+    },
+    {
+      "id": "fitness-6a6f3cad",
+      "category": "健身",
+      "category_en": "Fitness",
+      "icon": "🏋️",
+      "user_input": "新手女生居家健身计划，不去健身房，一个月肉眼可见变化",
+      "pipeline_level": "standard",
+      "models_participated": 27,
+      "pipeline_duration_seconds": 362.6,
+      "qualityPassed": true,
+      "totalScore": 95,
+      "steps_summary": [
+        {
+          "step": 1,
+          "name": "意图解读",
+          "status": "completed",
+          "duration_ms": 80057,
+          "highlight": ""
+        },
+        {
+          "step": 2,
+          "name": "数据采集",
+          "status": "completed",
+          "duration_ms": 9485,
+          "highlight": ""
+        },
+        {
+          "step": 3,
+          "name": "策略制定",
+          "status": "completed",
+          "duration_ms": 87517,
+          "highlight": "27个AI讨论策略"
+        },
+        {
+          "step": 4,
+          "name": "自由组队",
+          "status": "completed",
+          "duration_ms": 168546,
+          "highlight": ""
+        },
+        {
+          "step": 5,
+          "name": "内容生产",
+          "status": "completed",
+          "duration_ms": 16994,
+          "highlight": "三线并行：文案+封面+合规"
+        },
+        {
+          "step": 6,
+          "name": "质检封驳",
+          "status": "completed",
+          "duration_ms": 1,
+          "highlight": "质检95分，quality_v6"
+        },
+        {
+          "step": 7,
+          "name": "用户确认发布",
+          "status": "completed",
+          "duration_ms": 2,
+          "highlight": "用户确认发布"
+        },
+        {
+          "step": 8,
+          "name": "数据复盘",
+          "status": "completed",
+          "duration_ms": 0,
+          "highlight": ""
+        }
+      ],
+      "output": {
+        "title": "新手女生居家健身计划！30天肉眼可见",
+        "body": "亲测有效！我用这套纯徒手计划，每天12分钟，坚持30天后牛仔裤腰围松了1.5cm，同事说肩颈线变清晰了。谁懂啊——以前一上镜就下意识缩脖子，现在自拍敢开原图了！全程没买器械、没办卡，只靠一张瑜伽垫（某宝39元基础款）+手机支架跟练。\n\n✅ 第1-7天：适应期｜每天12分钟，4个动作循环3组\n• 跪姿臀桥（每侧12次×3组）→改善久坐塌腰\n• 弹力带划船（阻力中等，15次×3组）→收紧肩胛，缓解圆肩\n• 靠墙静蹲（每次45秒×3组）→安全激活大腿前侧\n• 平板支撑（30秒+15秒交替×3组）→核心稳了，穿T恤不显小肚子\n⚠️重点：第3天和第7天早上空腹量腰围，拍照角度/光线完全一致，这是我坚持下来的锚点。\n\n✅ 第8-21天：塑形期｜加入微变化，防平台期\n第10天起，把跪姿臀桥升级为单腿臀桥（每侧10次×3组），臀部发力感明显增强；第14天开始加「晨间5分钟呼吸法」（吸气4秒→屏息4秒→呼气6秒），配合训练后身体放松更彻底。实话说，第12天那周姨妈来了，我改成「经期友好版」：只做弹力带划船+靠墙静蹲，强度降30%，但没断练，这点真的救了我！\n\n✅ 第22-30天：巩固期｜聚焦体态与紧致感",
+        "tags": [
+          "居家健身",
+          "新手健身",
+          "女生健身",
+          "30天挑战",
+          "徒手训练",
+          "体态改善",
+          "健身计划"
+        ],
+        "cover_url": "",
+        "illustrations": []
+      },
+      "discussion_highlights": {
+        "total_rounds": 2,
+        "key_debate": "锚点检查跳过",
+        "vote_distribution": {
+          "8": 10,
+          "9": 2
+        },
+        "consensus_score": 8.2,
+        "consensus_summary": "共识生成失败：Model \"bailian_deepseek\" is currently unavailable until 2026-04-13T06:49:19.561Z."
+      },
+      "cost": {
+        "total_usd": 0.0246,
+        "breakdown": {
+          "intent_interpretation": 0.0017,
+          "strategy_formulation": 0.0229
+        }
+      }
+    },
+    {
+      "id": "travel-bec4a723",
+      "category": "旅行",
+      "category_en": "Travel",
+      "icon": "✈️",
+      "user_input": "五一假期3天2夜成都旅游攻略，人均1500吃住玩全包",
+      "pipeline_level": "standard",
+      "models_participated": 27,
+      "pipeline_duration_seconds": 348.3,
+      "qualityPassed": true,
+      "totalScore": 94,
+      "steps_summary": [
+        {
+          "step": 1,
+          "name": "意图解读",
+          "status": "completed",
+          "duration_ms": 68584,
+          "highlight": ""
+        },
+        {
+          "step": 2,
+          "name": "数据采集",
+          "status": "completed",
+          "duration_ms": 7568,
+          "highlight": ""
+        },
+        {
+          "step": 3,
+          "name": "策略制定",
+          "status": "completed",
+          "duration_ms": 87920,
+          "highlight": "27个AI讨论策略"
+        },
+        {
+          "step": 4,
+          "name": "自由组队",
+          "status": "completed",
+          "duration_ms": 164977,
+          "highlight": ""
+        },
+        {
+          "step": 5,
+          "name": "内容生产",
+          "status": "completed",
+          "duration_ms": 19204,
+          "highlight": "三线并行：文案+封面+合规"
+        },
+        {
+          "step": 6,
+          "name": "质检封驳",
+          "status": "completed",
+          "duration_ms": 1,
+          "highlight": "质检94分，quality_v6"
+        },
+        {
+          "step": 7,
+          "name": "用户确认发布",
+          "status": "completed",
+          "duration_ms": 3,
+          "highlight": "用户确认发布"
+        },
+        {
+          "step": 8,
+          "name": "数据复盘",
+          "status": "completed",
+          "duration_ms": 0,
+          "highlight": ""
+        }
+      ],
+      "output": {
+        "title": "五一3天2夜成都攻略！人均1500真",
+        "body": "亲测刚从成都回来！五一假期3天2夜，我和闺蜜两人全程没超预算，人均实付1486元（含交通往返），连火锅+熊猫基地+茶馆采耳都安排得明明白白。谁懂啊，出发前我刷了20+篇攻略，不是动辄2500+，就是漏掉门票或打车费…真的崩溃。这次全程按「学生党友好」逻辑设计，不赶路、不踩坑、不吃预制菜。\n\n✅【住宿】春熙路地铁口青旅床位，2晚共260元/人（提前28天抢到！五一当天已涨至198元/晚）；\n✅【餐饮】日均160元/人：钟水饺15元+龙抄手12元+建设路烤脑花28元+社区老火锅人均68元+玉林路冰粉8元；\n✅【门票+交通】熊猫基地58元+武侯祠50元+锦里&宽窄巷子全免费+地铁+共享单车共92元。\n\n📌Day1：人民公园鹤鸣茶社（15元盖碗茶+采耳38元）→ 魁星楼街小吃暴走 → 晚上锦里逛吃+蜀绣体验（免费参观，体验课80元自愿）；\n📌Day2：7:00抢进熊猫基地（我们蹲到小熊猫幼崽！）→ 下午建设路扫荡（叶婆婆锅盔8元/个）→ 晚上九眼桥江边散步+听livehouse（门票60元，学生证半价）；\n📌Day3：武侯祠红墙拍照（免费）→ 锦里买张飞牛肉伴手礼（35元/包）→ 15:",
+        "tags": [
+          "成都旅游攻略",
+          "五一出行",
+          "穷游成都",
+          "学生党旅行",
+          "成都美食",
+          "3天2夜行程",
+          "人均1500旅行"
+        ],
+        "cover_url": "",
+        "illustrations": []
+      },
+      "discussion_highlights": {
+        "total_rounds": 2,
+        "key_debate": "锚点检查跳过",
+        "vote_distribution": {
+          "8": 10,
+          "9": 2
+        },
+        "consensus_score": 8.2,
+        "consensus_summary": "共识生成失败：Model \"bailian_deepseek\" is currently unavailable until 2026-04-13T06:49:19.561Z."
+      },
+      "cost": {
+        "total_usd": 0.0254,
+        "breakdown": {
+          "intent_interpretation": 0.0019,
+          "strategy_formulation": 0.0235
+        }
+      }
+    },
+    {
+      "id": "food-7d16972d",
+      "category": "美食",
+      "category_en": "Food",
+      "icon": "🍜",
+      "user_input": "一个人住的懒人快手晚餐，15分钟搞定，好吃不胖",
+      "pipeline_level": "standard",
+      "models_participated": 27,
+      "pipeline_duration_seconds": 415.6,
+      "qualityPassed": true,
+      "totalScore": 92,
+      "steps_summary": [
+        {
+          "step": 1,
+          "name": "意图解读",
+          "status": "completed",
+          "duration_ms": 84888,
+          "highlight": ""
+        },
+        {
+          "step": 2,
+          "name": "数据采集",
+          "status": "completed",
+          "duration_ms": 8315,
+          "highlight": "采集到3条热点、0篇爆款"
+        },
+        {
+          "step": 3,
+          "name": "策略制定",
+          "status": "completed",
+          "duration_ms": 116875,
+          "highlight": "27个AI讨论策略"
+        },
+        {
+          "step": 4,
+          "name": "自由组队",
+          "status": "completed",
+          "duration_ms": 189885,
+          "highlight": ""
+        },
+        {
+          "step": 5,
+          "name": "内容生产",
+          "status": "completed",
+          "duration_ms": 15637,
+          "highlight": "三线并行：文案+封面+合规"
+        },
+        {
+          "step": 6,
+          "name": "质检封驳",
+          "status": "completed",
+          "duration_ms": 2,
+          "highlight": "质检92分，quality_v6"
+        },
+        {
+          "step": 7,
+          "name": "用户确认发布",
+          "status": "completed",
+          "duration_ms": 2,
+          "highlight": "用户确认发布"
+        },
+        {
+          "step": 8,
+          "name": "数据复盘",
+          "status": "completed",
+          "duration_ms": 0,
+          "highlight": ""
+        }
+      ],
+      "output": {
+        "title": "15分钟3顿懒人晚餐！亲测不胖还巨香",
+        "body": "谁懂啊！一个人住+下班瘫倒，连煮面都嫌麻烦的我，实话说踩过太多坑：买预制菜贵、外卖油盐超标、自己做又洗一堆锅…直到试出这3套「15分钟一锅端」公式，连续吃两周没重一克，胃和体重一起被治愈了😭\n\n✅【3套懒人晚餐公式】（亲测可复刻）\n① 空气炸锅版：即食鸡胸肉（29元/盒，京东自营）+冷冻西兰花（8.5元/袋）+微波米饭（3.2元/盒），15分钟全程不用开火，热量≈320大卡；\n② 一锅煮版：魔芋面（4.8元/包）+番茄罐头（12.9元/罐）+鸡蛋，水开下料，煮8分钟关火，撒点葱花完事，饱腹感强还不腻；\n③ 微波炉版：嫩豆腐（3.5元/盒）+即食毛豆（6.9元/袋）+低钠酱油+小米辣，所有材料放碗里，高火3分钟，拌匀即食，蛋白质+膳食纤维双达标。\n\n💡小贴士：我囤了3样懒人刚需——可微波饭盒（9.9元/个）、硅胶夹（12.8元/套）、即食蛋白包（鸡胸/三文鱼/豆腐卷，均价15.5元/份），省下每天15分钟洗切时间，等于每月多出7.5小时自由时间！真的绝了～\n\n⚠️有人问“不吃碳水会饿”，其实我每顿都配了慢碳（魔芋面/微波糙米饭/红薯块），血糖稳、不暴食；也有人担心调味太寡淡，我的秘密",
+        "tags": [
+          "一人食晚餐",
+          "懒人食谱",
+          "快手菜",
+          "健康晚餐",
+          "减脂餐",
+          "空气炸锅食谱",
+          "微波炉美食",
+          "上班族晚餐"
+        ],
+        "cover_url": "",
+        "illustrations": []
+      },
+      "discussion_highlights": {
+        "total_rounds": 2,
+        "key_debate": "锚点检查跳过",
+        "vote_distribution": {
+          "8": 10,
+          "9": 2
+        },
+        "consensus_score": 8.2,
+        "consensus_summary": "共识生成失败：Model \"bailian_deepseek\" is currently unavailable until 2026-04-13T06:49:19.561Z."
+      },
+      "cost": {
+        "total_usd": 0.0189,
+        "breakdown": {
+          "intent_interpretation": 0.0016,
+          "strategy_formulation": 0.0173
+        }
+      }
+    },
+    {
+      "id": "tech-db1d8134",
+      "category": "数码",
+      "category_en": "Tech",
+      "icon": "📱",
+      "user_input": "2026年最值得买的降噪耳机推荐，500块以内学生党",
+      "pipeline_level": "deep",
+      "models_participated": 27,
+      "pipeline_duration_seconds": 676.8,
+      "qualityPassed": true,
+      "totalScore": 94,
+      "steps_summary": [
+        {
+          "step": 1,
+          "name": "意图解读",
+          "status": "completed",
+          "duration_ms": 206410,
+          "highlight": ""
+        },
+        {
+          "step": 2,
+          "name": "数据采集",
+          "status": "completed",
+          "duration_ms": 8850,
+          "highlight": "采集到4条热点、0篇爆款"
+        },
+        {
+          "step": 3,
+          "name": "策略制定",
+          "status": "completed",
+          "duration_ms": 211097,
+          "highlight": "27个AI讨论策略"
+        },
+        {
+          "step": 4,
+          "name": "自由组队",
+          "status": "completed",
+          "duration_ms": 218386,
+          "highlight": ""
+        },
+        {
+          "step": 5,
+          "name": "内容生产",
+          "status": "completed",
+          "duration_ms": 32029,
+          "highlight": "三线并行：文案+封面+合规"
+        },
+        {
+          "step": 6,
+          "name": "质检封驳",
+          "status": "completed",
+          "duration_ms": 4,
+          "highlight": "质检94分，quality_v6"
+        },
+        {
+          "step": 7,
+          "name": "用户确认发布",
+          "status": "completed",
+          "duration_ms": 5,
+          "highlight": "用户确认发布"
+        },
+        {
+          "step": 8,
+          "name": "数据复盘",
+          "status": "completed",
+          "duration_ms": 1,
+          "highlight": ""
+        }
+      ],
+      "output": {
+        "title": "2026学生党必看！500元内3款降",
+        "body": "作为一个每天泡图书馆的学生党，降噪耳机真的是刚需！2026年新款耳机层出不穷，我实测了500元内3款高性价比降噪耳机，分享给预算有限的同学们～\n\n🎧【X品牌A1】¥499\n- 降噪深度35dB，自习室人声过滤超给力\n- 半入耳设计，戴4小时都不累\n- 续航30小时，通宵复习也不用担心\n（适合长时间学习的宝子们）\n\n🎧【Y品牌Storm】¥459\n- 42dB深度降噪，地铁通勤神器\n- 入耳式设计，隔音效果绝了\n- 25小时续航，支持快充\n（每天挤地铁的必入！）\n\n🎧【Z品牌Campus】¥399\n- 38dB降噪，宿舍隔音刚刚好\n- 颈挂式设计，运动也不会掉\n- 28小时续航，性价比之王\n（爱运动的同学看过来）\n\n✨选购小贴士：\n1. 学生认证能打折！记得带上学生证\n2. 618/双11会更便宜，不急可以等\n3. 建议先去实体店试戴，耳压感受因人而异\n\n这三款都是我亲测好用的，大家根据自己需求选就好啦～有什么问题欢迎评论区交流！",
+        "tags": [
+          "学生党必备",
+          "降噪耳机推荐",
+          "高性价比耳机",
+          "2026数码好物",
+          "学生党省钱攻略",
+          "实测分享",
+          "数码好物",
+          "耳机测评"
+        ],
+        "cover_url": "/Users/Admin/nebris-engine/output/covers/cover-2026-04-13T04-29-37-034Z.png",
+        "illustrations": []
+      },
+      "discussion_highlights": {
+        "total_rounds": 2,
+        "key_debate": "讨论严重偏离用户意图，全部响应聚焦于'如何制作跨平台营销内容'而非'推荐具体耳机产品'",
+        "vote_distribution": {
+          "8": 16,
+          "9": 2
+        },
+        "consensus_score": 8.1,
+        "consensus_summary": "### 最终建议方案：2026年500元内学生党降噪耳机推荐 #### 核心结论 针对学生党需求，推荐以下2026年500元内高性价比降噪耳机（附关键参数对比）： | 型号 | 降噪深度 | 续航(小时) | 佩戴方式 | 学生场景适配性 | 参考价格 | |-------------------|----------|------------|----------|----------------------|----------|…"
+      },
+      "cost": {
+        "total_usd": 0.0046,
+        "breakdown": {
+          "intent_interpretation": 0.0018,
+          "strategy_formulation": 0.0028
+        }
+      }
+    },
+    {
+      "id": "fashion-e58d3d2c",
+      "category": "穿搭",
+      "category_en": "Fashion",
+      "icon": "👗",
+      "user_input": "小个子女生秋冬穿搭攻略，155cm显高显瘦不踩雷，附真实穿搭公式",
+      "pipeline_level": "deep",
+      "models_participated": 27,
+      "pipeline_duration_seconds": 413.7,
+      "qualityPassed": true,
+      "totalScore": 93,
+      "steps_summary": [
+        {
+          "step": 1,
+          "name": "意图解读",
+          "status": "completed",
+          "duration_ms": 105728,
+          "highlight": ""
+        },
+        {
+          "step": 2,
+          "name": "数据采集",
+          "status": "completed",
+          "duration_ms": 9107,
+          "highlight": "采集到4条热点、0篇爆款"
+        },
+        {
+          "step": 3,
+          "name": "策略制定",
+          "status": "completed",
+          "duration_ms": 113094,
+          "highlight": "27个AI讨论策略"
+        },
+        {
+          "step": 4,
+          "name": "自由组队",
+          "status": "completed",
+          "duration_ms": 151355,
+          "highlight": ""
+        },
+        {
+          "step": 5,
+          "name": "内容生产",
+          "status": "completed",
+          "duration_ms": 34362,
+          "highlight": "三线并行：文案+封面+合规"
+        },
+        {
+          "step": 6,
+          "name": "质检封驳",
+          "status": "completed",
+          "duration_ms": 4,
+          "highlight": "质检93分，quality_v6"
+        },
+        {
+          "step": 7,
+          "name": "用户确认发布",
+          "status": "completed",
+          "duration_ms": 4,
+          "highlight": "用户确认发布"
+        },
+        {
+          "step": 8,
+          "name": "数据复盘",
+          "status": "completed",
+          "duration_ms": 0,
+          "highlight": ""
+        }
+      ],
+      "output": {
+        "title": "155cm必看！3套显高公式绝了",
+        "body": "作为155cm的小个子，秋冬穿搭真的太容易踩雷了！今天分享亲测有效的3套显高公式，照着穿秒变165cm既视感～\n\n✨公式1：短外套+高腰裤\n外套长度不超过50cm（实测！），搭配高腰直筒裤，腰线直接抬高8cm！推荐ZARA的短款羽绒服（货号092），衣长48cm刚好合适。\n\n✨公式2：同色系叠穿\n内搭和裤子选同色系，外套选对比色，纵向延伸超显瘦！我这套奶茶色针织+米白直筒裤，搭配黑色短大衣，同事都问我是不是长高了。\n\n✨公式3：V领+高腰裙\nV领视觉拉长脖子，搭配65cm左右的高腰A字裙（这个长度最显腿长），小个子也能驾驭长裙！\n\n⚠️避雷清单：\n❌超长大衣（压个子警告）\n❌低腰牛仔裤（五五分惨案）\n❌宽松oversize毛衣（秒变球球）\n\n所有搭配都标注了具体衣长/裙长数据，155cm姐妹可以直接照搬！记得收藏哦～",
+        "tags": [
+          "小个子穿搭",
+          "秋冬穿搭",
+          "显高穿搭",
+          "155cm穿搭",
+          "穿搭公式",
+          "显瘦穿搭",
+          "穿搭避雷",
+          "日常穿搭"
+        ],
+        "cover_url": "/Users/Admin/nebris-engine/output/covers/cover-2026-04-12T15-41-15-382Z.png",
+        "illustrations": []
+      },
+      "discussion_highlights": {
+        "total_rounds": 2,
+        "key_debate": "讨论整体聚焦155cm小个子秋冬穿搭，但过度侧重跨平台分发策略，弱化核心内容构建",
+        "vote_distribution": {
+          "8": 12,
+          "9": 2
+        },
+        "consensus_score": 8.1,
+        "consensus_summary": "### 最终建议方案：小个子女生秋冬穿搭攻略跨平台内容策略 --- #### **核心结论** 1. **需求验证**：目标用户（155cm左右小个子女生）对“显高显瘦+避雷”的秋冬穿搭需求强烈（热度72-80分），需提供**强实操性、公式化、真人实测**内容。 2. **跨平台策略**：差异化适配平台特性，以“对比效果+数据化公式”为核心钩子，覆盖“即时冲击-深度解析-私域沉淀”全链路。 --- ### **执行步骤** #### …"
+      },
+      "cost": {
+        "total_usd": 0.0046,
+        "breakdown": {
+          "intent_interpretation": 0.0019,
+          "strategy_formulation": 0.0027
+        }
+      }
+    },
+    {
+      "id": "skincare-4902b959",
+      "category": "护肤",
+      "category_en": "Skincare",
+      "icon": "🧴",
+      "user_input": "大学生平价护肤routine，月预算200块，油皮痘肌怎么选",
+      "pipeline_level": "standard",
+      "models_participated": 27,
+      "pipeline_duration_seconds": 451.9,
+      "qualityPassed": true,
+      "totalScore": 90,
+      "steps_summary": [
+        {
+          "step": 1,
+          "name": "意图解读",
+          "status": "completed",
+          "duration_ms": 119878,
+          "highlight": ""
+        },
+        {
+          "step": 2,
+          "name": "数据采集",
+          "status": "completed",
+          "duration_ms": 11406,
+          "highlight": "采集到4条热点、0篇爆款"
+        },
+        {
+          "step": 3,
+          "name": "策略制定",
+          "status": "completed",
+          "duration_ms": 110444,
+          "highlight": "27个AI讨论策略"
+        },
+        {
+          "step": 4,
+          "name": "自由组队",
+          "status": "completed",
+          "duration_ms": 178619,
+          "highlight": ""
+        },
+        {
+          "step": 5,
+          "name": "内容生产",
+          "status": "completed",
+          "duration_ms": 31518,
+          "highlight": "三线并行：文案+封面+合规"
+        },
+        {
+          "step": 6,
+          "name": "质检封驳",
+          "status": "completed",
+          "duration_ms": 2,
+          "highlight": "质检90分，quality_v6"
+        },
+        {
+          "step": 7,
+          "name": "用户确认发布",
+          "status": "pending",
+          "duration_ms": null,
+          "highlight": ""
+        },
+        {
+          "step": 8,
+          "name": "数据复盘",
+          "status": "pending",
+          "duration_ms": null,
+          "highlight": ""
+        }
+      ],
+      "output": {
+        "title": "油痘肌200元护肤攻略",
+        "body": "✨【200元搞定油痘肌全套护肤】学生党必看✨\n\n作为资深油痘肌+吃土大学生，这套方案我实测3个月！\n\n🌞晨间routine（控油防护）：\n1️⃣ 旁氏米粹洁面（20元）：氨基酸配方温和不拔干\n2️⃣ 上水和肌水杨酸精华（59元）：2%缓释水杨酸控油一绝\n3️⃣ 新碧小金帽防晒（50元）：成膜快不闷痘\n\n🌙夜间routine（抗痘修护）：\n1️⃣ The Ordinary壬二酸（75元）：点涂痘痘超有效\n2️⃣ 薇诺娜特护霜小样（30元）：烂脸期救命用\n\n💡小贴士：\n- 水杨酸需建立耐受（隔天使用）\n- 买小样更划算（特护霜15g用1个月）\n- 爆痘期搭配3M痘痘贴（10元/盒）\n\n📊200元分配表：\n洁面20+水杨酸59+防晒50+壬二酸75+特护霜30=234元\n（灵活替换可控制在200内）\n\n❌避雷清单：\n- 含酒精的爽肤水（刺激爆痘）\n- 厚重面霜（闷闭口）\n- 皂基洁面（破坏屏障）\n\n#油痘肌护肤 #学生党平价护肤 #护肤routine",
+        "tags": [
+          "油痘肌",
+          "学生党护肤",
+          "平价护肤",
+          "护肤routine",
+          "成分党",
+          "痘肌护理",
+          "省钱攻略",
+          "护肤干货"
+        ],
+        "cover_url": "/Users/Admin/nebris-engine/output/covers/cover-2026-04-12T14-02-34-755Z.png",
+        "illustrations": []
+      },
+      "discussion_highlights": {
+        "total_rounds": 2,
+        "key_debate": "讨论严重偏离用户意图，从「护肤方案推荐」滑向「内容平台运营策略」，未回答油皮痘肌具体该买什么产品",
+        "vote_distribution": {
+          "8": 12,
+          "9": 2
+        },
+        "consensus_score": 8.1,
+        "consensus_summary": "### **最终建议方案：大学生油皮痘肌平价护肤routine（月预算200元）** #### **核心结论** 为油痘肌大学生提供一套科学、高性价比的护肤方案，覆盖 **控油、抗痘、保湿** 三大核心需求，确保 **成分有效、价格可控、操作简单**，适配宿舍生活场景。 --- ### **一、具体产品清单（200元预算分配）** #### **1. 晨间护肤（控油+防护）** - **洁面（控油型）**： - **旁氏米粹洁面乳**…"
+      },
+      "cost": {
+        "total_usd": 0.0045,
+        "breakdown": {
+          "intent_interpretation": 0.0018,
+          "strategy_formulation": 0.0027
+        }
+      }
+    }
+  ]
+}
