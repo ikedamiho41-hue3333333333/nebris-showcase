@@ -42,8 +42,8 @@ function PlatformLine({
 
 const PHASE1 = [
   { name: "小红书", status: "live" as const },
-  { name: "公众号", status: "live" as const },
-  { name: "微博", status: "live" as const },
+  { name: "公众号", status: "building" as const },
+  { name: "微博", status: "building" as const },
   { name: "知乎", status: "building" as const },
   { name: "豆瓣", status: "building" as const },
   { name: "Instagram", status: "planned" as const },

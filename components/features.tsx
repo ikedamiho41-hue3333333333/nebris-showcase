@@ -5,8 +5,9 @@ import { Bot, Brain, Cpu, MessageSquare, Network, Sparkles, Vote, Zap } from "lu
 const features = [
   {
     icon: Bot,
-    title: "27个AI模型",
-    description: "GPT-4o、Claude、Gemini、DeepSeek等全球顶级AI模型联合创作，多角度思考，产出更优质内容。",
+    title: "14端点·27席位",
+    description:
+      "DeepSeek、Kimi、Qwen、MiniMax、Gemma、Llama、Nemotron 等已配置端点，多角色复用形成 27 讨论席位，多角度交叉讨论。",
   },
   {
     icon: MessageSquare,
@@ -49,7 +50,7 @@ export function Features() {
             全球AI协同，为你创作
           </h2>
           <p className="mx-auto max-w-2xl text-[#9BA89F]">
-            不再是单一AI的独白，而是27个AI模型的智慧碰撞，产出经过充分讨论和投票的优质内容
+            不再是单一 AI 的独白，而是 27 个讨论席位上的交叉讨论与投票，产出经共识收敛的优质内容
           </p>
         </div>
 

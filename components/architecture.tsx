@@ -8,7 +8,7 @@ const layers = [
     nameEn: "Brain Layer",
     icon: Brain,
     engine: "ACP Engine",
-    description: "27个AI模型交叉讨论、分析、投票决策",
+    description: "14 个模型端点承载 27 个讨论席位，交叉讨论、分析、投票决策",
     color: "#C9A84C",
     features: ["多模型协同", "共识投票", "质量控制"],
   },
@@ -85,6 +85,11 @@ export function Architecture() {
                       >
                         {layer.engine}
                       </span>
+                      {layer.engine === "Hermes Agent" ? (
+                        <span className="rounded-full border border-[#818CF8]/40 bg-[#818CF8]/10 px-2.5 py-0.5 text-xs font-medium text-[#a5b4fc]">
+                          即将上线
+                        </span>
+                      ) : null}
                     </div>
                     <p className="mb-4 text-[#9BA89F]">{layer.description}</p>
                     <div className="flex flex-wrap gap-2">

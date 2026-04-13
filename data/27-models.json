@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "description": "27-model ACP panel configuration",
+  "models": [
+    { "id": "bailian_deepseek",    "label": "DeepSeek-V3",       "tier": "high",   "domain": ["strategy","content","analysis"], "base_weight": 1.0, "accuracy_history": 0.88 },
+    { "id": "bailian_deepseek_r1", "label": "DeepSeek-R1",       "tier": "high",   "domain": ["strategy","reasoning","review"], "base_weight": 1.0, "accuracy_history": 0.90 },
+    { "id": "bailian_kimi",        "label": "Kimi-Moonshot",      "tier": "high",   "domain": ["content","creative","compliance"], "base_weight": 1.0, "accuracy_history": 0.85 },
+    { "id": "bailian_qwen_plus",   "label": "Qwen-Plus",         "tier": "high",   "domain": ["content","strategy","review"], "base_weight": 0.95, "accuracy_history": 0.84 },
+    { "id": "bailian_qwen_turbo",  "label": "Qwen-Turbo",        "tier": "medium", "domain": ["content","creative"], "base_weight": 0.80, "accuracy_history": 0.78 },
+    { "id": "bailian_minimax",     "label": "MiniMax-M2.5",      "tier": "medium", "domain": ["creative","content","emotional"], "base_weight": 0.82, "accuracy_history": 0.79 },
+    { "id": "or_qwen3_coder",      "label": "Qwen3-Coder",       "tier": "medium", "domain": ["technical","analysis","structure"], "base_weight": 0.78, "accuracy_history": 0.77, "_model_id": "qwen/qwen3-coder:free" },
+    { "id": "or_gemma4",           "label": "Gemma-4",           "tier": "medium", "domain": ["content","creative","reasoning"], "base_weight": 0.75, "accuracy_history": 0.74 },
+    { "id": "or_llama",            "label": "Llama-3.3-70B",     "tier": "medium", "domain": ["content","strategy"], "base_weight": 0.75, "accuracy_history": 0.73, "_model_id": "meta-llama/llama-3.3-70b-instruct:free" },
+    { "id": "or_nemotron",         "label": "Nemotron",          "tier": "medium", "domain": ["reasoning","analysis"], "base_weight": 0.73, "accuracy_history": 0.72 },
+    { "id": "or_minimax",          "label": "MiniMax-OR",        "tier": "medium", "domain": ["creative","content"], "base_weight": 0.72, "accuracy_history": 0.71 },
+    { "id": "or_free",             "label": "OR-Free",           "tier": "low",    "domain": ["content"], "base_weight": 0.60, "accuracy_history": 0.65 },
+    { "id": "deepseek_direct",     "label": "DeepSeek-Direct",   "tier": "high",   "domain": ["strategy","content","reasoning"], "base_weight": 0.95, "accuracy_history": 0.87 },
+    { "id": "kimi_direct",         "label": "Kimi-Direct",       "tier": "high",   "domain": ["content","creative","compliance"], "base_weight": 0.93, "accuracy_history": 0.84 },
+    { "id": "bailian_deepseek",    "label": "DeepSeek-V3-B",     "tier": "high",   "domain": ["review","analysis"], "base_weight": 0.88, "accuracy_history": 0.88, "role_override": "critic" },
+    { "id": "bailian_kimi",        "label": "Kimi-Creative",     "tier": "high",   "domain": ["creative","content"], "base_weight": 0.85, "accuracy_history": 0.85, "role_override": "creative_lead" },
+    { "id": "bailian_qwen_plus",   "label": "Qwen-Compliance",   "tier": "high",   "domain": ["compliance","review"], "base_weight": 0.83, "accuracy_history": 0.84, "role_override": "compliance_officer" },
+    { "id": "or_gemma4",           "label": "Gemma-Strategist",  "tier": "medium", "domain": ["strategy","positioning"], "base_weight": 0.74, "accuracy_history": 0.74, "role_override": "strategist" },
+    { "id": "or_llama",            "label": "Llama-Analyst",     "tier": "medium", "domain": ["analysis","data"], "base_weight": 0.73, "accuracy_history": 0.73, "role_override": "analyst", "_model_id": "meta-llama/llama-3.3-70b-instruct:free" },
+    { "id": "bailian_deepseek_r1", "label": "R1-Challenger",     "tier": "high",   "domain": ["reasoning","devil_advocate"], "base_weight": 0.89, "accuracy_history": 0.90, "role_override": "devil_advocate" },
+    { "id": "bailian_minimax",     "label": "MiniMax-UX",        "tier": "medium", "domain": ["ux","user_research","emotional"], "base_weight": 0.80, "accuracy_history": 0.79, "role_override": "ux_researcher" },
+    { "id": "or_qwen3_coder",      "label": "Qwen3-Structured",  "tier": "medium", "domain": ["structure","format","technical"], "base_weight": 0.77, "accuracy_history": 0.77, "role_override": "format_auditor" },
+    { "id": "deepseek_direct",     "label": "DeepSeek-Risk",     "tier": "high",   "domain": ["risk","compliance","review"], "base_weight": 0.92, "accuracy_history": 0.87, "role_override": "risk_assessor" },
+    { "id": "kimi_direct",         "label": "Kimi-Trend",        "tier": "high",   "domain": ["trends","viral","platform"], "base_weight": 0.90, "accuracy_history": 0.84, "role_override": "trend_spotter" },
+    { "id": "or_nemotron",         "label": "Nemotron-Logic",    "tier": "medium", "domain": ["logic","reasoning","debate"], "base_weight": 0.71, "accuracy_history": 0.72, "role_override": "logician" },
+    { "id": "bailian_qwen_turbo",  "label": "Qwen-Speed",        "tier": "medium", "domain": ["quick_check","sanity"], "base_weight": 0.78, "accuracy_history": 0.78, "role_override": "quick_validator" },
+    { "id": "or_free",             "label": "OR-Wildcard",       "tier": "low",    "domain": ["creative","unconventional"], "base_weight": 0.58, "accuracy_history": 0.65, "role_override": "wildcard" }
+  ],
+  "quorum": {
+    "min_responses": 15,
+    "total": 27,
+    "batch_size": 6,
+    "single_timeout_ms": 60000
+  },
+  "voting": {
+    "score_range": [1, 9],
+    "debate_threshold": 2.0,
+    "weight_formula": "accuracy_history * domain_match * confidence"
+  }
+}

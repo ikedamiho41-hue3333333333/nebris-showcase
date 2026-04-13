@@ -18,7 +18,7 @@ export function Hero() {
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#C9A84C]/30 bg-[#C9A84C]/10 px-4 py-1.5">
             <Sparkles className="h-4 w-4 text-[#C9A84C]" />
-            <span className="text-sm text-[#C9A84C]">27个AI模型协同创作</span>
+            <span className="text-sm text-[#C9A84C]">14个模型端点 · 27讨论席位</span>
           </div>
 
           {/* Logo/Mascot */}
@@ -55,7 +55,7 @@ export function Hero() {
 
           {/* Description */}
           <p className="mb-8 max-w-2xl text-base text-[#9BA89F] md:text-lg">
-            27 个 AI 模型交叉讨论、投票决策，为你创作最优质的内容。
+            14 个模型端点、27 个讨论席位交叉讨论与投票，为你创作更可靠的内容。
             <br className="hidden md:block" />
             平台矩阵分阶段开放（图文先行），三层智能架构，让 AI 为你全权运营。
           </p>

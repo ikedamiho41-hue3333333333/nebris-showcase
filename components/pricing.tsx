@@ -9,9 +9,9 @@ const plans = [
     nameCn: "快速",
     price: "¥9.9",
     unit: "/ 篇",
-    description: "7 模型，快速生成",
+    description: "7 讨论席位，快速生成",
     icon: Zap,
-    features: ["7 个 AI 模型参与", "快速讨论与成稿", "适合轻量选题与试水"],
+    features: ["7 个讨论席位参与", "快速讨论与成稿", "适合轻量选题与试水"],
     highlight: false,
   },
   {
@@ -19,9 +19,9 @@ const plans = [
     nameCn: "标准",
     price: "¥29.9",
     unit: "/ 篇",
-    description: "15 模型，标准质量",
+    description: "15 讨论席位，标准质量",
     icon: Star,
-    features: ["15 个 AI 模型参与", "多轮交叉讨论", "投票与共识收敛"],
+    features: ["15 个讨论席位参与", "多轮交叉讨论", "投票与共识收敛"],
     highlight: false,
   },
   {
@@ -29,9 +29,9 @@ const plans = [
     nameCn: "深度",
     price: "¥59.9",
     unit: "/ 篇",
-    description: "27 模型，最高质量",
+    description: "27 讨论席位，最高质量",
     icon: Sparkles,
-    features: ["全部 27 个 AI 模型", "最深讨论轮次", "质检与策略全量启用"],
+    features: ["全部 27 个讨论席位", "最深讨论轮次", "质检与策略全量启用"],
     highlight: true,
   },
 ]
@@ -49,7 +49,7 @@ export function Pricing() {
             按篇计费，透明档位
           </h2>
           <p className="mx-auto max-w-2xl text-[#888888]">
-            Quick / Standard / Deep 对应不同模型规模与讨论深度
+            Quick / Standard / Deep 对应不同讨论席位规模与深度
           </p>
         </div>
 

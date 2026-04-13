@@ -4,23 +4,22 @@ import { useEffect, useState } from "react"
 import { Bot, ThumbsUp, ThumbsDown, CheckCircle2 } from "lucide-react"
 
 const AI_MODELS = [
-  { name: "GPT-4o", color: "#10B981", shortName: "GPT" },
-  { name: "Claude 3.5", color: "#8B5CF6", shortName: "CLD" },
-  { name: "Gemini Pro", color: "#3B82F6", shortName: "GEM" },
-  { name: "DeepSeek", color: "#F59E0B", shortName: "DSK" },
-  { name: "Qwen 2.5", color: "#EC4899", shortName: "QWN" },
-  { name: "Llama 3", color: "#06B6D4", shortName: "LLA" },
-  { name: "Mistral", color: "#EF4444", shortName: "MIS" },
-  { name: "Yi-Large", color: "#84CC16", shortName: "YI" },
+  { name: "DeepSeek", color: "#F59E0B", shortName: "DS" },
+  { name: "Kimi", color: "#EC4899", shortName: "KM" },
+  { name: "Qwen", color: "#06B6D4", shortName: "QW" },
+  { name: "MiniMax", color: "#8B5CF6", shortName: "MM" },
+  { name: "Gemma", color: "#10B981", shortName: "GM" },
+  { name: "Llama 3.3", color: "#3B82F6", shortName: "LL" },
+  { name: "Nemotron", color: "#EF4444", shortName: "NM" },
 ]
 
 const DISCUSSION_MESSAGES = [
   { model: 0, content: "这篇小红书文案需要更强调产品的独特卖点，建议开头用提问引起共鸣。" },
-  { model: 1, content: "同意 GPT-4o 的观点。我补充一点：可以加入一些情感化的表达，让内容更有温度。" },
+  { model: 1, content: "同意 DeepSeek 的判断。我补充一点：可以加入一些情感化的表达，让内容更有温度。" },
   { model: 2, content: "从数据分析来看，带有数字的标题点击率高出23%，建议标题加入具体数据。" },
   { model: 3, content: "我来优化一下文案结构：痛点引入 → 解决方案 → 产品展示 → 用户见证。" },
   { model: 4, content: "针对小红书平台特性，建议增加互动性话术，如「你觉得呢？」「评论区告诉我」。" },
-  { model: 5, content: "综合以上建议，我来生成最终版本。已整合5个AI的观点。" },
+  { model: 5, content: "综合以上建议，我来生成最终版本。已整合多席位的交叉观点。" },
 ]
 
 export function AIDiscussionDemo() {
@@ -61,7 +60,7 @@ export function AIDiscussionDemo() {
           <div className="flex items-center gap-2">
             <span className="text-xs text-[#9BA89F]">参与模型：</span>
             <div className="flex -space-x-1">
-              {AI_MODELS.slice(0, 6).map((model, i) => (
+              {AI_MODELS.map((model, i) => (
                 <div
                   key={i}
                   className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-[#12121A] text-[8px] font-bold text-white"
@@ -71,8 +70,8 @@ export function AIDiscussionDemo() {
                   {model.shortName[0]}
                 </div>
               ))}
-              <div className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-[#12121A] bg-[#2A2A36] text-[10px] text-[#9BA89F]">
-                +21
+              <div className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-[#12121A] bg-[#2A2A36] px-0.5 text-[9px] font-medium leading-none text-[#9BA89F]">
+                +7
               </div>
             </div>
           </div>
@@ -144,8 +143,8 @@ export function AIDiscussionDemo() {
                     </span>
                   )}
                 </div>
-                <div className="grid grid-cols-3 gap-2 md:grid-cols-6">
-                  {AI_MODELS.slice(0, 6).map((model, i) => (
+                <div className="grid grid-cols-4 gap-2 sm:grid-cols-7">
+                  {AI_MODELS.map((model, i) => (
                     <div
                       key={i}
                       className="flex flex-col items-center gap-1 rounded-lg bg-[#0A0A0F] p-2"
@@ -168,7 +167,7 @@ export function AIDiscussionDemo() {
                 </div>
                 {votingComplete && (
                   <div className="mt-3 text-center text-sm text-[#9BA89F]">
-                    27个AI模型投票完成，最终方案已生成
+                    27 个讨论席位投票完成，最终方案已生成
                   </div>
                 )}
               </div>
@@ -180,7 +179,7 @@ export function AIDiscussionDemo() {
         <div className="flex items-center justify-between border-t border-[#2A2A36] bg-[#0A0A0F] px-4 py-3">
           <div className="flex items-center gap-4 text-xs text-[#9BA89F]">
             <span>讨论轮次: {Math.min(visibleMessages, 6)}/6</span>
-            <span>参与模型: 27</span>
+            <span>14 端点 · 27 席</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="rounded bg-[#10B981]/20 px-2 py-1 text-xs text-[#10B981]">

@@ -1,43 +1,30 @@
 "use client"
 
-/** 可后续替换为 JSON；接入 11+13+5=29 路，产品编排 27 并行讨论席位 */
-const OVERSEAS_MODELS = [
-  "Llama 3.3 70B Instruct",
-  "Google Gemma 4",
-  "NVIDIA Nemotron 3",
-  "Qwen3 Coder",
-  "MiniMax M2.5 (OpenRouter)",
-  "OpenRouter 自动选择",
-  "Mistral Large (OR)",
-  "Claude 3 Haiku (OR)",
-  "Gemini 2.0 Flash (OR)",
-  "Phi-4 (OpenRouter)",
-  "DeepSeek Chat (OR)",
-]
+import modelsConfig from "@/data/27-models.json"
 
-const DOMESTIC_MODELS = [
-  "通义千问 Plus",
-  "通义千问 Turbo",
-  "DeepSeek V3.2（百炼）",
-  "DeepSeek R1（百炼）",
-  "Kimi K2.5（百炼）",
-  "MiniMax M2.5（百炼）",
-  "文心一言 4.0",
-  "讯飞星火 V3.5",
-  "腾讯混元",
-  "豆包 Pro",
-  "百川 Baichuan",
-  "零一万物 Yi",
-  "阶跃星辰 Step",
-]
+type ModelRow = { id: string; label: string }
 
-const LOCAL_MODELS = [
-  "DeepSeek Direct",
-  "Kimi Direct",
-  "Ollama / 本地推理",
-  "vLLM 私有化部署",
-  "企业内网 RAG 位",
-]
+function uniqueEndpoints(models: ModelRow[]): ModelRow[] {
+  const seen = new Set<string>()
+  const out: ModelRow[] = []
+  for (const m of models) {
+    if (seen.has(m.id)) continue
+    seen.add(m.id)
+    out.push({ id: m.id, label: m.label })
+  }
+  return out
+}
+
+function bucket(id: string): "bailian" | "openrouter" | "direct" {
+  if (id === "deepseek_direct" || id === "kimi_direct") return "direct"
+  if (id.startsWith("or_")) return "openrouter"
+  return "bailian"
+}
+
+const endpoints = uniqueEndpoints(modelsConfig.models as ModelRow[])
+const BAILIAN = endpoints.filter((e) => bucket(e.id) === "bailian")
+const OPENROUTER = endpoints.filter((e) => bucket(e.id) === "openrouter")
+const DIRECT = endpoints.filter((e) => bucket(e.id) === "direct")
 
 export function ModelPool() {
   return (
@@ -49,11 +36,14 @@ export function ModelPool() {
             <span className="text-sm font-medium tracking-wider uppercase">模型池</span>
           </div>
           <h2 className="mb-3 text-3xl font-bold text-[#EEF2EA] md:text-4xl">
-            <span className="text-[#d4a853]">27</span> 个 AI 模型
+            <span className="text-[#d4a853]">14</span>个AI模型 ·{" "}
+            <span className="text-[#d4a853]">27</span>个讨论席位
           </h2>
-          <p className="mx-auto max-w-2xl text-sm text-[#888888] md:text-base">
-            海外 11 + 国内 13 + 本地 5 路接入；两栏浏览。编排层统一{" "}
-            <span className="text-[#d4a853]">27</span> 个并行讨论席位（含通道冗余）。
+          <p className="mx-auto max-w-2xl text-xs text-[#888888] md:text-sm">
+            每个模型承担多个专业角色，通过角色复用实现 27 席位交叉讨论。
+          </p>
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-[#888888] md:text-base">
+            以下为 <span className="text-[#d4a853]">{endpoints.length}</span> 路独立 API 端点，按接入方式分组展示。
           </p>
         </div>
 
@@ -61,32 +51,32 @@ export function ModelPool() {
           <div className="space-y-8">
             <div className="rounded-xl border border-[#d4a853]/30 bg-[#111116] p-6">
               <h3 className="mb-1 text-lg font-semibold text-[#d4a853]">
-                海外 <span className="text-[#888888]">({OVERSEAS_MODELS.length} 个)</span>
+                国内百炼 <span className="text-[#888888]">({BAILIAN.length} 个端点)</span>
               </h3>
-              <p className="mb-4 text-xs text-[#888888]">OpenRouter 与国际模型路由</p>
+              <p className="mb-4 text-xs text-[#888888]">DeepSeek / Kimi / Qwen / MiniMax 等</p>
               <ul className="grid gap-2 sm:grid-cols-1">
-                {OVERSEAS_MODELS.map((name) => (
+                {BAILIAN.map((e) => (
                   <li
-                    key={name}
+                    key={e.id}
                     className="rounded-lg border border-[#2A2A36] bg-[#0A0A0F] px-3 py-2 text-sm text-[#e0e0e0]"
                   >
-                    {name}
+                    {e.label}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="rounded-xl border border-[#d4a853]/30 bg-[#111116] p-6">
               <h3 className="mb-1 text-lg font-semibold text-[#d4a853]">
-                本地 <span className="text-[#888888]">({LOCAL_MODELS.length} 个)</span>
+                直连 API <span className="text-[#888888]">({DIRECT.length} 个端点)</span>
               </h3>
-              <p className="mb-4 text-xs text-[#888888]">直连 API / 私有化与本地推理</p>
+              <p className="mb-4 text-xs text-[#888888]">官方 DeepSeek / Kimi 直连</p>
               <ul className="space-y-2">
-                {LOCAL_MODELS.map((name) => (
+                {DIRECT.map((e) => (
                   <li
-                    key={name}
+                    key={e.id}
                     className="rounded-lg border border-[#2A2A36] bg-[#0A0A0F] px-3 py-2 text-sm text-[#e0e0e0]"
                   >
-                    {name}
+                    {e.label}
                   </li>
                 ))}
               </ul>
@@ -95,16 +85,16 @@ export function ModelPool() {
 
           <div className="rounded-xl border border-[#d4a853]/30 bg-[#111116] p-6">
             <h3 className="mb-1 text-lg font-semibold text-[#d4a853]">
-              国内 <span className="text-[#888888]">({DOMESTIC_MODELS.length} 个)</span>
+              OpenRouter <span className="text-[#888888]">({OPENROUTER.length} 个端点)</span>
             </h3>
-            <p className="mb-4 text-xs text-[#888888]">百炼与国内大模型 API</p>
-            <ul className="grid max-h-[520px] gap-2 overflow-y-auto pr-1 sm:grid-cols-1">
-              {DOMESTIC_MODELS.map((name) => (
+            <p className="mb-4 text-xs text-[#888888]">Qwen3-Coder、Gemma、Llama、Nemotron、MiniMax、Free 路由</p>
+            <ul className="grid gap-2 sm:grid-cols-1">
+              {OPENROUTER.map((e) => (
                 <li
-                  key={name}
+                  key={e.id}
                   className="rounded-lg border border-[#2A2A36] bg-[#0A0A0F] px-3 py-2 text-sm text-[#e0e0e0]"
                 >
-                  {name}
+                  {e.label}
                 </li>
               ))}
             </ul>

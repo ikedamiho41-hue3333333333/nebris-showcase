@@ -22,7 +22,7 @@ const notoSansSC = Noto_Sans_SC({
 export const metadata: Metadata = {
   title: "开翌 NEBRIS - 让全球AI为你全权运营",
   description:
-    "27个AI模型交叉讨论投票，为你创作内容。平台矩阵分阶段开放，三层智能架构，让AI为你全权运营。",
+    "14个模型端点、27个讨论席位交叉讨论与投票，为你创作内容。平台矩阵分阶段开放，三层智能架构，让AI为你全权运营。",
   generator: "v0.app",
   keywords: ["AI内容运营", "AI写作", "内容创作", "NEBRIS", "开翌"],
 }

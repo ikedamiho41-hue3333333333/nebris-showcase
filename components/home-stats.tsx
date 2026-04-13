@@ -1,10 +1,10 @@
 "use client"
 
 const STATS = [
-  { value: "27", label: "个 AI 模型" },
-  { value: "96.8%", label: "成功率" },
+  { value: "14", label: "个模型端点" },
+  { value: "≥90%", label: "Pipeline完成率" },
   { value: "92.4", label: "平均质检分" },
-  { value: "187秒", label: "平均生成" },
+  { value: "约2-3分钟", label: "平均生成" },
 ] as const
 
 export function HomeStats() {
