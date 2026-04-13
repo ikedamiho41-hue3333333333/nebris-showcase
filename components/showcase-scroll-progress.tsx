@@ -23,7 +23,7 @@ export function ShowcaseScrollProgress() {
 
   return (
     <div
-      className="pointer-events-none fixed left-0 right-0 top-0 z-[100] h-0.5 bg-[#1a1a24]/90"
+      className="pointer-events-none fixed left-0 right-0 top-0 z-[100] h-0.5 bg-[#0a0a0f]"
       role="progressbar"
       aria-valuenow={Math.round(pct)}
       aria-valuemin={0}
@@ -31,7 +31,7 @@ export function ShowcaseScrollProgress() {
       aria-label="页面阅读进度"
     >
       <div
-        className="h-full bg-gradient-to-r from-[#c9a84c] to-[#d4a853] shadow-[0_0_12px_rgba(212,168,83,0.35)] transition-[width] duration-150 ease-out"
+        className="h-full bg-[#d4a853] shadow-[0_0_10px_rgba(212,168,83,0.4)] transition-[width] duration-150 ease-out"
         style={{ width: `${pct}%` }}
       />
     </div>
