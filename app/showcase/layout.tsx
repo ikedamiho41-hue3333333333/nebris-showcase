@@ -1,37 +1,23 @@
-import type { Metadata } from "next"
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nebris-showcase.vercel.app"),
-  title: "开翌 NEBRIS · 让全球AI为你全权运营",
-  description:
-    "27个AI交叉讨论、投票、达成共识，自动生成小红书爆款内容。说一句话，AI帮你全部搞定。",
+  title: '开翌 NEBRIS · 真实赛道展示',
+  description: '27个AI协作产出的7个赛道真实内容，质检平均92.9分',
+  metadataBase: new URL('https://nebris.cc'),
   openGraph: {
-    title: "开翌 NEBRIS · 让全球AI为你全权运营",
-    description: "27个AI交叉讨论、投票、达成共识，自动生成小红书爆款内容。",
-    url: "https://nebris-showcase.vercel.app/showcase",
-    siteName: "开翌 NEBRIS",
-    type: "website",
-    images: [
-      {
-        url: "/og-showcase.png",
-        width: 1200,
-        height: 630,
-        alt: "开翌 NEBRIS - AI内容创作引擎",
-      },
-    ],
+    title: '开翌 NEBRIS · 27个AI为你全权运营',
+    description: '8个赛道、8步Pipeline、27个AI模型协作——真实内容展示',
+    url: 'https://nebris.cc/showcase',
+    siteName: '开翌 NEBRIS',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "开翌 NEBRIS · 让全球AI为你全权运营",
-    description: "27个AI交叉讨论、投票、达成共识，自动生成小红书爆款内容。",
-    images: ["/og-showcase.png"],
+    card: 'summary_large_image',
+    title: '开翌 NEBRIS · 27个AI为你全权运营',
+    description: '真实AI协作内容展示',
   },
 }
 
-export default function ShowcaseLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return children
+export default function ShowcaseLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
 }
